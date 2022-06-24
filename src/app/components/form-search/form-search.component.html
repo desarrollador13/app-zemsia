@@ -5,7 +5,7 @@
             [formGroup]="formPerson" 
             (ngSubmit)="onSubmit($event)">
             <div class="form-group" style="padding:10px;">
-                <label for="formGroupExampleInput">Tipo documento</label>
+                <label style="color:#06276B" for="formGroupExampleInput">Tipo documento</label>
                 <select 
                     #mySelect
                     formControlName="tipoDocumento"
@@ -22,7 +22,7 @@
                     Tipo Documento es requerido</span>
             </div>
             <div class="form-group" style="padding:10px;">
-                <label for="formGroupExampleInput">Número de Documento</label>
+                <label style="color:#06276B" for="formGroupExampleInput">Número de Documento</label>
                 <input 
                     formControlName="numDocumento"
                     type="text" 

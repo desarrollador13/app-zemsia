@@ -6,15 +6,37 @@
               <p class="card-text text-colors" *ngIf="msg!='Exitoso'">
                 {{msg}}
               </p> 
-              <ul *ngIf="msg=='Exitoso'">
-                <li>Primer Nombre: {{data.datos.primerNombre}}</li>
-                <li>SegundoNombre: {{data.datos.segundoNombre}}</li>
-                <li>Primer Apellido: {{data.datos.primerApellido}}</li>
-                <li>Segundo Apellido: {{data.datos.segundoApellido}}</li>
-                <li>Telefono: {{data.datos.telefono}}</li>
-                <li>Direccion: {{data.datos.direccion}}</li>
-                <li>Ciudad Residencia: {{data.datos.ciudadResidencia}}</li>
-              </ul>
+
+              <div *ngIf="msg=='Exitoso'">
+                <label>
+                  Primer Nombre:
+                </label>
+                <p>{{data.datos.primerNombre}}</p>
+                <label>
+                  Segundo Nombre:
+                </label>
+                <p>{{data.datos.segundoNombre}}</p>
+                <label>
+                  Primer Apellido:
+                </label>
+                <p>{{data.datos.primerApellido}}</p>
+                <label>
+                  Segundo Apellido:
+                </label>
+                <p>{{data.datos.segundoApellido}}</p>
+                <label>
+                  Telefono:
+                </label>
+                <p>{{data.datos.telefono}}</p>
+                <label>
+                  Direccion:
+                </label>
+                <p>{{data.datos.direccion}}</p>
+                <label>
+                  ciudad Residencia:
+                </label>
+                <p>{{data.datos.ciudadResidencia}}</p>
+              </div>
 
               <button 
                 style="width: 217px;"
