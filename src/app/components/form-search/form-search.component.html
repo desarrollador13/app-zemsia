@@ -1,0 +1,50 @@
+<div class="row">
+    <div class="col-md-6 offset-md-3">
+        <form 
+            class="shadow-form form-person form-validate form-horizontal" 
+            [formGroup]="formPerson" 
+            (ngSubmit)="onSubmit($event)">
+            <div class="form-group" style="padding:10px;">
+                <label for="formGroupExampleInput">Tipo documento</label>
+                <select 
+                    #mySelect
+                    formControlName="tipoDocumento"
+                    class="form-control" 
+                    id="rol" name="rol" 
+                    id="formGroupExampleInput"
+                    (change)="checkInput()">
+                    <option value="">Seleccione un tipo documento</option>
+                    <option *ngFor="let select of dataSelect" value={{select.value}}>{{select.name}}</option>
+                </select>
+                <span 
+                    style="color:red" 
+                    *ngIf="controlfields('tipoDocumento').touched && controlfields('tipoDocumento').errors?.required">
+                    Tipo Documento es requerido</span>
+            </div>
+            <div class="form-group" style="padding:10px;">
+                <label for="formGroupExampleInput">Número de Documento</label>
+                <input 
+                    formControlName="numDocumento"
+                    type="text" 
+                    minlength="8" 
+                    maxlength="11"
+                    class="form-control" 
+                    id="formGroupExampleInput" 
+                    placeholder=""
+                    (change)="checkInput()">
+                <span 
+                    style="color:red" 
+                    *ngIf="controlfields('numDocumento').touched && controlfields('numDocumento').errors?.pattern">
+                    Número de Documento es requerido, longitud entre 8 y 11 caracteres numérico</span>
+            </div>
+            <div class="form-group" style="padding:10px;">
+                <button 
+                    [disabled]="enabled"
+                    type="submit" 
+                    class="btn btn-primary">Buscar</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<router-outlet></router-outlet>

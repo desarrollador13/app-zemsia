@@ -1,0 +1,27 @@
+<div class="row">
+    <div class="col-md-4 offset-md-4">
+        <div class="card">
+            <div class="card-body shadow-card">
+              <h5 class="card-title">Información Básica</h5>
+              <p class="card-text text-colors" *ngIf="msg!='Exitoso'">
+                {{msg}}
+              </p> 
+              <ul *ngIf="msg=='Exitoso'">
+                <li>Primer Nombre: {{data.datos.primerNombre}}</li>
+                <li>SegundoNombre: {{data.datos.segundoNombre}}</li>
+                <li>Primer Apellido: {{data.datos.primerApellido}}</li>
+                <li>Segundo Apellido: {{data.datos.segundoApellido}}</li>
+                <li>Telefono: {{data.datos.telefono}}</li>
+                <li>Direccion: {{data.datos.direccion}}</li>
+                <li>Ciudad Residencia: {{data.datos.ciudadResidencia}}</li>
+              </ul>
+
+              <button 
+                style="width: 217px;"
+                type="submit" 
+                (click)="Toreturn();"
+                class="btn btn-primary">Regresar</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,8 +1,17 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-
-
-const routes: Routes = [];
+import { FormSearchComponent } from './components/form-search/form-search.component';
+import { InfoPersonComponent } from './components/info-person/info-person.component';
+const routes: Routes = [
+  {
+    path: '',
+    component: FormSearchComponent
+  },
+  {
+    path: 'informacion/:tipoCedula/:numCedula',
+    component: InfoPersonComponent
+  },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
