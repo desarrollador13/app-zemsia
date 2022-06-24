@@ -39,9 +39,11 @@
             </div>
             <div class="form-group" style="padding:10px;">
                 <button 
+                    style="width:140px;border-radius: 8px;"
+                    [ngClass]="{'bottom-opacity' : enabled, 'btn btn-primary' : !enabled}"
                     [disabled]="enabled"
                     type="submit" 
-                    class="btn btn-primary">Buscar</button>
+                    >Buscar</button>
             </div>
         </form>
     </div>
